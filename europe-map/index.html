@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europe Travel Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  header {
+    padding: 10px 16px;
+    background: #1b2a4a;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #c7d0e8;
+  }
+  #map {
+    flex: 1;
+    background: #dce6f0;
+  }
+  .flag-icon {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .country-label {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1b2a4a;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Europe Travel Map</h1>
+    <p>Click a country to mark it visited (turns blue) and drop a flag. Click again to add more flags.</p>
+  </header>
+  <div id="map"></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+</html>
